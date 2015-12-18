@@ -11,12 +11,17 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://my-ghost-blog.com',
+        url: 'http://whois.sherodbail.ee',
         mail: {},
+        fileStorage: false,
         database: {
-            client: 'sqlite3',
+            client: 'pg',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
+                host     : 'ec2-107-21-223-147.compute-1.amazonaws.com',
+                user     : 'obytakfpsqplew',
+                password : '-i2baw4l8LpluyZgdSVDVMeDz7',
+                database : 'dd5064ajnv2qnc',
+                charset  : 'utf8'
             },
             debug: false
         },
